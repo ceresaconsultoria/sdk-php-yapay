@@ -1,0 +1,33 @@
+{
+    "name": "ceresaconsultoria/sdk-php-yapay",
+    "description": "SDK PHP das Apis da Yapay",
+    "keywords": ["api", "library", "psr-4", "yapay", "sdk"],
+    "homepage": "https://github.com/ceresaconsultoria/sdk-php-yapay",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Weslley Ceresa",
+            "email": "ceresaconsultoria@gmail.com",
+            "homepage": "https://www.ceresaconsultoria.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^6.5",
+        "symfony/event-dispatcher": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yapay\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": []
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "victorjonsson/markdowndocs": "^1.3"
+    }
+}
