@@ -20,9 +20,9 @@ use Yapay\Exceptions\YPException;
  *
  * @author weslley
  */
-class CreditCard extends YPController{
+class Payment extends YPController{
     
-    public function create(array $data){        
+    public function execute(array $data){        
         try{
             $response = $this->http->post("api/v3/transactions/payment", array(
                 "json" => $data
