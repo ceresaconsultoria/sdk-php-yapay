@@ -40,7 +40,7 @@ class Payment extends YPController{
             
             if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, 500, $ex->getPrevious());
                 
             }
             
@@ -53,7 +53,7 @@ class Payment extends YPController{
             
             if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
             
@@ -65,7 +65,7 @@ class Payment extends YPController{
             
             if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, 400, $ex->getPrevious());
                 
             }
             
