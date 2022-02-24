@@ -31,9 +31,9 @@ class Transaction {
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->errorMsg)){
+            if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->errorMsg, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
                 
             }
             
@@ -44,9 +44,9 @@ class Transaction {
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->errorMsg)){
+            if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->errorMsg, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
                 
             }
             
@@ -56,9 +56,9 @@ class Transaction {
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->errorMsg)){
+            if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->errorMsg, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
                 
             }
             
@@ -86,9 +86,9 @@ class Transaction {
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->errorMsg)){
+            if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->errorMsg, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
                 
             }
             
@@ -99,9 +99,9 @@ class Transaction {
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->errorMsg)){
+            if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->errorMsg, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
                 
             }
             
@@ -111,9 +111,9 @@ class Transaction {
             
             $bodyDecoded = json_decode($body);
             
-            if(isset($bodyDecoded->errorMsg)){
+            if(isset($bodyDecoded->error_response)){
                 
-                throw YPException::fromObjectMessage($bodyDecoded->errorMsg, $bodyDecoded->code, $ex->getPrevious());
+                throw YPException::fromObjectMessage($bodyDecoded->error_response, $bodyDecoded->code, $ex->getPrevious());
                 
             }
             

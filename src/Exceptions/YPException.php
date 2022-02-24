@@ -28,13 +28,9 @@ class YPException extends Exception{
             
             $newMessageString = [];
             
-            foreach($message as $key => $typeError){
+            foreach($message->general_errors as $error){
                 
-                foreach($typeError as $type => $errorMsg){
-                    
-                    $newMessageString[] =  $errorMsg;
-                    
-                }
+                $newMessageString[] =  $error->message;
                 
             }
             
