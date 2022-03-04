@@ -28,11 +28,19 @@ class YPException extends Exception{
             
             $newMessageString = [];
             
-            foreach($message->general_errors as $error){
-                
-                $newMessageString[] =  $error->message;
-                
-            }
+            if(isset($message->general_errors))
+                foreach($message->general_errors as $error){
+
+                    $newMessageString[] =  $error->message;
+
+                }                           
+            
+            if(isset($message->validation_errors))
+                foreach($message->validation_errors as $error){
+
+                    $newMessageString[] =  $error->message_complete;
+
+                }                           
             
             return new YPException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
         }
