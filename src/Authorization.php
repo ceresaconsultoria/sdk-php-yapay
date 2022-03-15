@@ -8,7 +8,12 @@
 
 namespace Yapay;
 
+use Exception;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ServerException;
 use Yapay\Core\YPController;
+use Yapay\Exceptions\YPException;
 
 /**
  * Description of Authorization
