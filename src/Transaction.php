@@ -12,6 +12,7 @@ use Exception;
 use GuzzleHttp\Exception\BadResponseException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
+use Yapay\Core\YPController;
 use Yapay\Exceptions\YPException;
 
 /**
@@ -19,7 +20,7 @@ use Yapay\Exceptions\YPException;
  *
  * @author weslley
  */
-class Transaction {
+class Transaction extends YPController{
     
     public function trace(array $data){  
         try{
