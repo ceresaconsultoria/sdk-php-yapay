@@ -17,8 +17,13 @@ use Exception;
  */
 class YPException extends Exception{
     
-    public function __construct(Exception $ex) {
-        $message = $ex->getMessage() . PHP_EOL . $ex->getTraceAsString();        
+    public function __construct(Exception $ex, $completeError = false) {
+        $message = $ex->getMessage(); 
+        
+        if($completeError){
+            $message .= PHP_EOL . $ex->getTraceAsString();
+        }
+        
         parent::__construct($message, $ex->getCode(), $ex->getPrevious());
     }
     
