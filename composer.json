@@ -14,8 +14,7 @@
     ],
     "require": {
         "php": ">=7.4",
-        "guzzlehttp/guzzle": "^7",
-        "symfony/event-dispatcher": "^5.4"
+        "guzzlehttp/guzzle": "^7"
     },
     "autoload": {
         "psr-4": {
