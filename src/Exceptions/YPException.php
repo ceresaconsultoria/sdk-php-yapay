@@ -30,24 +30,9 @@ class YPException extends Exception{
     public static function fromObjectMessage($message, $code, $previous = null){
         
         if(is_object($message)){
-            
-            $newMessageString = [];
-            
-            if(isset($message->general_errors))
-                foreach($message->general_errors as $error){
 
-                    $newMessageString[] =  $error->message;
-
-                }                           
+            return new YPException( new Exception(json_encode($message), $code, $previous) );   
             
-            if(isset($message->validation_errors))
-                foreach($message->validation_errors as $error){
-
-                    $newMessageString[] =  $error->message_complete;
-
-                }                           
-            
-            return new YPException( new Exception(implode("\n", $newMessageString), $code, $previous) );     
         }
         
         if(is_string($message)){
